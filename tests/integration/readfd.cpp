@@ -6,13 +6,17 @@
  * See LICENSE.md for Copyright information
  */
 
-#include <stdexcept>
-
-#include <gmock/gmock.h>
+#include <iosfwd>
+#include <memory>
+#include <vector>
 
 #include <assert.h>
 #include <unistd.h>
-#include <errno.h>
+#include <string>
+
+#include <gtest/gtest.h>
+#include <gmock/gmock-matchers.h>
+#include <gmock/gmock-generated-matchers.h>
 
 #include <cpp-subprocess/operating_system.h>
 #include <cpp-subprocess/pipe.h>

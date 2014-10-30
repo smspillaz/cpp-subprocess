@@ -10,7 +10,10 @@
 #ifndef POLYSQUARE_CPP_SUBPROCESS_LOCATE_BINARY_H
 #define POLYSQUARE_CPP_SUBPROCESS_LOCATE_BINARY_H
 
+#include <exception>
 #include <functional>
+#include <iosfwd>
+#include <stdexcept>
 #include <string>
 
 namespace polysquare

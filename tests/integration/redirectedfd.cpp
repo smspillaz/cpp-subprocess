@@ -8,11 +8,16 @@
 #include <stdexcept>
 
 #include <memory>
+#include <string>
 
-#include <gmock/gmock.h>
+#include <gmock/gmock-actions.h>
+#include <gmock/gmock-matchers.h>
+#include <gmock/gmock-spec-builders.h>
+#include <gtest/gtest.h>
 
-#include <stdio.h>
-#include <sys/poll.h>
+#include <assert.h>
+#include <poll.h>
+#include <unistd.h>
 
 #include <cpp-subprocess/fdbackup.h>
 #include <cpp-subprocess/operating_system.h>

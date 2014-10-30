@@ -10,9 +10,9 @@
 #include <iostream>
 #include <stdexcept>
 
-#include <unistd.h>
-#include <errno.h>
 #include <string.h>
+
+#include <sys/errno.h>
 
 #include <cpp-subprocess/fdbackup.h>
 #include <cpp-subprocess/operating_system.h>

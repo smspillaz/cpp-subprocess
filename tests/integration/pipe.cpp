@@ -6,13 +6,21 @@
  * See LICENSE.md for Copyright information
  */
 
+#include <memory>
+#include <ostream>
 #include <stdexcept>
+#include <vector>
+
+#include <assert.h>
+#include <unistd.h>
+#include <poll.h>
 
 #include <gtest/gtest.h>
-
-#include <unistd.h>
-#include <sys/poll.h>
-#include <errno.h>
+#include <gmock/gmock-actions.h>
+#include <gmock/gmock-generated-actions.h>
+#include <gmock/gmock-matchers.h>
+#include <gmock/gmock-more-actions.h>
+#include <gmock/gmock-spec-builders.h>
 
 #include <cpp-subprocess/operating_system.h>
 #include <cpp-subprocess/pipe.h>

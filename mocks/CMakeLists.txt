@@ -4,6 +4,7 @@
 # See LICENCE.md for Copyright information.
 
 set (CPP_SUBPROCESS_MOCKS_SRCS
+     ${CMAKE_CURRENT_SOURCE_DIR}/mock_operating_system.h
      ${CMAKE_CURRENT_SOURCE_DIR}/mock_operating_system.cpp)
 
 polysquare_add_mock (${CPP_SUBPROCESS_MOCKS}
@@ -14,4 +15,6 @@ polysquare_add_mock (${CPP_SUBPROCESS_MOCKS}
                      ${CPP_SUBPROCESS_INTERNAL_INCLUDE_DIRECTORY}
                      ${CPP_SUBPROCESS_INTERNAL_SOURCE_DIRECTORY}
                      LIBRARIES
-                     ${CPP_SUBPROCESS_EXTERNAL_LIBRARIES})
+                     ${CPP_SUBPROCESS_EXTERNAL_LIBRARIES}
+                     CLANG_TIDY_DISABLE_CHECKS
+                     clang-analyzer-cplusplus.NewDelete)

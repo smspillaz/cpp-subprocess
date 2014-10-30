@@ -7,20 +7,27 @@
  * See LICENCE.md for Copyright information.
  */
 
-#include <algorithm>
-#include <cstring>
 #include <functional>
-#include <locale>
-#include <sstream>
+#include <iostream>
+#include <iterator>
+#include <exception>
+#include <stdexcept>
 #include <string>
+#include <sstream> // IWYU pragma: keep
 #include <utility>
 #include <vector>
+
+#include <cstring>
+#include <cstddef>
+#include <cstdlib>
 
 #include <boost/algorithm/string/replace.hpp>
 
 #include <libgen.h>
 
 #include "generators_common.h"
+
+// IWYU pragma: no_include <__functional_base>
 
 namespace yg = polysquare::subprocess::generators;
 namespace ygt = polysquare::subprocess::generators::transformations;

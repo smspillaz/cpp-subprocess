@@ -7,14 +7,19 @@
  */
 
 #include <memory>
+#include <ostream>
 #include <stdexcept>
+#include <string>
+
+#include <assert.h>
+#include <poll.h>
+#include <unistd.h>
 
 #include <gtest/gtest.h>
 
-#include <unistd.h>
-#include <sys/poll.h>
-#include <fcntl.h>
-#include <errno.h>
+#include <gmock/gmock-actions.h>
+#include <gmock/gmock-matchers.h>
+#include <gmock/gmock-spec-builders.h>
 
 #include <cpp-subprocess/operating_system.h>
 #include <cpp-subprocess/fdbackup.h>

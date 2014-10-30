@@ -5,10 +5,12 @@
  * See LICENCE.md for Copyright information.
  */
 
-#include <fcntl.h>
+#include <cstddef>
+
+#include <poll.h>
 #include <unistd.h>
 
-#include <sys/poll.h>
+#include <sys/fcntl.h>
 #include <sys/wait.h>
 
 #include <cpp-subprocess/operating_system.h>
@@ -22,21 +24,21 @@ namespace
     {
         public:
 
-            int pipe (int p[2]) const;
+            int pipe (int p[2]) const override;
             int execve (char const   *path,
                         char * const argv[],
-                        char * const envp[]) const;
-            int access (char const *path, int mode) const;
-            int dup (int fd) const;
-            int dup2 (int fd, int fd2) const;
-            int close (int fd) const;
-            pid_t waitpid (pid_t pid, int *status, int options) const;
-            pid_t fork () const;
-            int poll (struct pollfd *pfd, int n, int timeout) const;
-            ssize_t read (int fd, void *msg, size_t n) const;
-            ssize_t write (int fd, void *msg, size_t n) const;
-            int fcntl_setfl (int fd, int flags) const;
-            int fcntl_getfl (int fd) const;
+                        char * const envp[]) const override;
+            int access (char const *path, int mode) const override;
+            int dup (int fd) const override;
+            int dup2 (int fd, int fd2) const override;
+            int close (int fd) const override;
+            pid_t waitpid (pid_t pid, int *status, int options) const override;
+            pid_t fork () const override;
+            int poll (struct ::pollfd *pfd, int n, int timeout) const override;
+            ssize_t read (int fd, void *msg, size_t n) const override;
+            ssize_t write (int fd, void *msg, size_t n) const override;
+            int fcntl_setfl (int fd, int flags) const override;
+            int fcntl_getfl (int fd) const override;
     };
 }
 

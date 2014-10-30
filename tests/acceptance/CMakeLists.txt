@@ -49,7 +49,9 @@ polysquare_add_test (${CPP_SUBPROCESS_ACCEPTANCE_TESTS}
                      LIBRARIES
                      ${CPP_SUBPROCESS_EXTERNAL_LIBRARIES}
                      ${CPP_SUBPROCESS_LIBRARY}
-                     MOCKS ${CPP_SUBPROCESS_MOCKS})
+                     MOCKS ${CPP_SUBPROCESS_MOCKS}
+                     CLANG_TIDY_DISABLE_CHECKS
+                     clang-analyzer-cplusplus.NewDelete)
 
 
 set (SIMPLE_EXECUTABLE_BINARY_SOURCE_DIRECTORY

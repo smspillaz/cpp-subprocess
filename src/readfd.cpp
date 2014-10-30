@@ -9,17 +9,19 @@
  */
 
 #include <functional>
-#include <string>
 #include <sstream>
 #include <vector>
 
-#include <boost/iostreams/device/file_descriptor.hpp>
-#include <boost/iostreams/stream.hpp>
+#include <boost/iostreams/categories.hpp>
+#include <boost/iostreams/detail/forward.hpp>
+#include <boost/iostreams/stream_buffer.hpp>
+#include <boost/iostreams/device/file_descriptor.hpp> // IWYU pragma: keep
+#include <boost/iostreams/stream.hpp> // IWYU pragma: keep
 
-#include <fcntl.h>
+#include <sys/fcntl.h>
 
 #include <cpp-subprocess/operating_system.h>
-#include <cpp-subprocess/readfd.h>
+#include <cpp-subprocess/readfd.h> // IWYU pragma: keep
 
 namespace bio = boost::iostreams;
 namespace ps = polysquare::subprocess;

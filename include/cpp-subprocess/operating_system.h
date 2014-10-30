@@ -11,7 +11,11 @@
 
 #include <memory>
 
+#include <cstddef>
+
 #include <sys/types.h>
+
+struct pollfd;
 
 namespace polysquare
 {
@@ -37,7 +41,7 @@ namespace polysquare
                                        int *stat_loc,
                                        int options) const = 0;
                 virtual pid_t fork () const = 0;
-                virtual int poll (struct pollfd *pfd,
+                virtual int poll (struct ::pollfd *pfd,
                                   int nfd,
                                   int timeout) const = 0;
                 virtual ssize_t read (int fd, void *msg, size_t n) const = 0;

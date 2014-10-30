@@ -8,13 +8,15 @@
  */
 
 #include <iostream>
-#include <sstream>
+#include <functional>
 #include <stdexcept>
+#include <sstream> // IWYU pragma: keep
+#include <string>
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <errno.h>
-#include <string.h>
+#include <cstring>
+
+#include <sys/errno.h>
+#include <sys/unistd.h>
 
 #include <cpp-subprocess/locatebinary.h>
 #include <cpp-subprocess/operating_system.h>

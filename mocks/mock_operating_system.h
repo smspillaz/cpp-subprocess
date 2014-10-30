@@ -9,8 +9,12 @@
 #ifndef POLYSQUARE_SUBPROCESS_MOCK_OPERATING_SYSTEM_H
 #define POLYSQUARE_SUBPROCESS_MOCK_OPERATING_SYSTEM_H
 
-#include <functional>
-#include <gmock/gmock.h>
+#include <cstddef>
+
+#include <sys/types.h>
+
+#include <gmock/gmock-generated-function-mockers.h>
+#include <gmock/gmock-matchers.h>
 
 #include <cpp-subprocess/operating_system.h>
 
@@ -26,7 +30,7 @@ namespace polysquare
                 public:
 
                     OperatingSystem ();
-                    ~OperatingSystem ();
+                    ~OperatingSystem () override;
 
                     MOCK_CONST_METHOD1 (pipe, int (int p[2]));
                     MOCK_CONST_METHOD3 (execve, int (char const *path,

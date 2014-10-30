@@ -8,13 +8,28 @@
  */
 
 #include <array>
+#include <memory>
+#include <ostream>
+#include <stdexcept>
+#include <string>
+#include <vector>
 #include <functional>
 
 #include <cstdlib>
 
+#include <boost/type_traits.hpp> // IWYU pragma: keep
+#include <boost/token_functions.hpp>
 #include <boost/tokenizer.hpp>
 
-#include <gmock/gmock.h>
+#include <sys/errno.h>
+#include <sys/unistd.h>
+#include <unistd.h>
+
+#include <gmock/gmock-actions.h>
+#include <gmock/gmock-generated-actions.h>
+#include <gmock/gmock-matchers.h>
+#include <gmock/gmock-spec-builders.h>
+#include <gtest/gtest.h>
 
 #include "acceptance_tests_config.h"
 

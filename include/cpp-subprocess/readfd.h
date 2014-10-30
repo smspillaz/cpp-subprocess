@@ -12,8 +12,8 @@
 #define POLYSQUARE_CPP_SUBPROCESS_READFD_H
 
 #include <memory>
+#include <iosfwd>
 #include <vector>
-#include <string>
 
 namespace polysquare
 {

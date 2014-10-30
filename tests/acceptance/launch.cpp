@@ -7,6 +7,11 @@
  * See LICENCE.md for Copyright information
  */
 
+#include <iosfwd>
+#include <memory>
+
+#include <cstddef>
+
 #include <gtest/gtest.h>
 
 #include <cpp-subprocess/launch.h>

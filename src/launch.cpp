@@ -8,21 +8,23 @@
  */
 
 #include <iostream>
-#include <sstream>
 #include <stdexcept>
+#include <sstream> // IWYU pragma: keep
+
+#include <cstdio>
+#include <cstdlib>
+
+#include <sys/errno.h>
 
 #include <unistd.h>
-#include <errno.h>
-#include <sys/poll.h>
-#include <sys/types.h>
 #include <sys/wait.h>
-#include <fcntl.h>
 #include <string.h>
 
 #include <cpp-subprocess/fdbackup.h>
-#include <cpp-subprocess/launch.h>
 #include <cpp-subprocess/operating_system.h>
 #include <cpp-subprocess/redirectedfd.h>
+
+#include <cpp-subprocess/launch.h> // IWYU pragma: keep
 
 namespace ps = polysquare::subprocess;
 

@@ -7,6 +7,11 @@
  * See LICENCE.md for Copyright information.
  */
 
+#include <cstddef>
+
+#include <gmock/gmock-cardinalities.h>
+#include <gmock/gmock-spec-builders.h>
+
 #include "mock_operating_system.h"
 
 using ::testing::_;

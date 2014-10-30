@@ -26,7 +26,7 @@ polysquare_rules_bootstrap (${CPP_SUBPROCESS_CMAKE_COMMON_MODULE_DIRECTORY}
                             ${CMAKE_BINARY_DIR})
 polysquare_gmock_bootstrap (${CPP_SUBPROCESS_CMAKE_COMMON_MODULE_DIRECTORY})
 polysquare_coverage_bootstrap (${CPP_SUBPROCESS_CMAKE_COMMON_MODULE_DIRECTORY})
-polysquare_cotire_bootstrap (${CPP_SUBPROCESS_CMAKE_COMMON_MODULE_DIRECTORY})
+polysquare_acceleration_bootstrap (${CPP_SUBPROCESS_CMAKE_COMMON_MODULE_DIRECTORY})
 
 function (cpp_subprocess_import_external_libraries_from_boost RETURN_VALUE
                                                               VERSION)

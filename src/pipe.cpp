@@ -9,8 +9,9 @@
 #include <iostream>
 #include <stdexcept>
 
-#include <errno.h>
-#include <string.h>
+#include <cstring>
+
+#include <sys/errno.h>
 
 #include <cpp-subprocess/operating_system.h>
 #include <cpp-subprocess/pipe.h>
